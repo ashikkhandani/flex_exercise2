@@ -1,0 +1,50 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.container {
+  border: 2px solid black;
+}
+
+/* My main content */
+.flex-container {
+  display: flex;
+  /* height: 60vh; */
+}
+
+.item {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  text-align: center;
+  padding: 3rem 1rem;
+  margin: 6px;
+  border: 5px solid #c8e9a0;
+  background-color: #6dd3ce;
+}
+article.item {
+  border: 6px solid #a13d63;
+  padding: 80px;
+}
+.main-article {
+  flex: 2;
+  order: 2;
+}
+.sidebar-left {
+  flex: 1;
+  order: 1;
+}
+.sidebar-right {
+  flex: 1;
+  order: 3;
+}
+
+@media screen and (max-width: 675px) {
+  /* Main content  */
+  .flex-container {
+    flex-direction: column;
+  }
+  .sidebar-left {
+    order: 3;
+  }
+}
